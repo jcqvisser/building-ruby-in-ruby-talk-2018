@@ -17,5 +17,9 @@ module ChurchNumerals
     def dec
       self
     end
+
+    def +(other)
+      other
+    end
   end
 end

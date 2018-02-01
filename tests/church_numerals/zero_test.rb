@@ -32,5 +32,13 @@ module ChurchNumerals
       another_zero = zero.dec
       assert_equal 0, zero.to_i
     end
+
+    def test_plus_returns_the_added_number
+      zero = Zero.new
+      two = Number.new(Number.new)
+
+      another_two = zero + two
+      assert_equal two.to_i, another_two.to_i
+    end
   end
 end
