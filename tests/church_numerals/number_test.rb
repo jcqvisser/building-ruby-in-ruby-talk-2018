@@ -86,7 +86,15 @@ module ChurchNumerals
       decremented_number = number.dec
 
       assert_equal expected_value, decremented_number.to_i
+    end
 
+    def test_plus_adds_two_numbers
+      two = Number.new(Number.new)
+      three = Number.new(Number.new(Number.new))
+
+      five = two + three
+
+      assert_equal 5, five.to_i
     end
   end
 end
