@@ -1,12 +1,13 @@
 module Booleans
-  class True
+  class False
     def if_true(&block)
-      block.call
       self
     end
 
     def if_false(&block)
+      block.call
       self
     end
   end
 end
+
