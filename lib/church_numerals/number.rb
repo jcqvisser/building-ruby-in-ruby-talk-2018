@@ -15,6 +15,10 @@ module ChurchNumerals
       call(0) { |value| value + 1 }
     end
 
+    def inc
+      Number.new(self)
+    end
+
     private
     attr_reader :previous_number
   end

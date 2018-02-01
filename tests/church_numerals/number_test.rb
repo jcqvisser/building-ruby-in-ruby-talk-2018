@@ -63,5 +63,17 @@ module ChurchNumerals
 
       assert_equal n, number.to_i
     end
+
+    def test_inc_returns_the_incremented_number
+      number = Number.new(Number.new)
+      expected_value = 2
+
+      assert_equal expected_value, number.to_i
+
+      expected_value += 1
+      incremented_number = number.inc
+
+      assert_equal expected_value, incremented_number.to_i
+    end
   end
 end
