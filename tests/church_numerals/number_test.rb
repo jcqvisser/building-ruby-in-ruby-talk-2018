@@ -144,5 +144,21 @@ module ChurchNumerals
 
       assert_equal 0, (two * zero).to_i
     end
+
+    def test_times_repeats_a_block_n_times
+      n = 30
+
+      number = Zero.new
+      n.times do
+        number = Number.new(number)
+      end
+
+      repititions = 0
+      number.times do
+        repititions += 1
+      end
+
+      assert_equal n, repititions
+    end
   end
 end

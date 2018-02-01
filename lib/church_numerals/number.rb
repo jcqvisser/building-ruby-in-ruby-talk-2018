@@ -41,6 +41,10 @@ module ChurchNumerals
       }
     end
 
+    def times(&block)
+      call(nil) { block.call }
+    end
+
     private
     attr_reader :previous_number
   end

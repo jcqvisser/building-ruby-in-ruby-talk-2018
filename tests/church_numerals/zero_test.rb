@@ -56,5 +56,16 @@ module ChurchNumerals
       another_zero = zero * two
       assert_equal 0, another_zero.to_i
     end
+
+    def test_times_does_not_call_a_block
+      zero = Zero.new
+
+      repititions = 0
+      zero.times do
+        repititions += 1
+      end
+
+      assert_equal 0, repititions
+    end
   end
 end
