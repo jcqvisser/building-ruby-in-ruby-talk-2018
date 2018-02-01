@@ -124,5 +124,25 @@ module ChurchNumerals
       zero = two - three
       assert_equal 0, zero.to_i
     end
+
+    def test_multiply_two_non_zero_numbers_returns_the_multiple
+      two = Number.new(Number.new)
+      three = Number.new(Number.new(Number.new))
+
+      assert two.to_i > 0
+      assert three.to_i > 0
+
+      assert_equal two.to_i * three.to_i, (two * three).to_i
+    end
+
+    def test_multiply_a_non_zero_number_with_zero_returns_zero
+      two = Number.new(Number.new)
+      zero = Zero.new
+
+      assert two.to_i > 0
+      assert_equal zero.to_i, 0
+
+      assert_equal 0, (two * zero).to_i
+    end
   end
 end

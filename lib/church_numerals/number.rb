@@ -35,6 +35,12 @@ module ChurchNumerals
       }
     end
 
+    def *(other)
+      call(Zero.new) { |new_value|
+        new_value + other
+      }
+    end
+
     private
     attr_reader :previous_number
   end

@@ -25,5 +25,9 @@ module ChurchNumerals
     def -(other)
       self
     end
+
+    def *(other)
+      self
+    end
   end
 end
