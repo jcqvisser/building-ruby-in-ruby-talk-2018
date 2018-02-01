@@ -20,5 +20,11 @@ module ChurchNumerals
       zero = Zero.new
       assert_equal 0, zero.to_i
     end
+
+    def test_inc_returns_a_number_that_represents_one
+      zero = Zero.new
+      one = zero.inc
+      assert_equal 1, one.to_i
+    end
   end
 end

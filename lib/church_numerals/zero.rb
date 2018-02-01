@@ -1,3 +1,5 @@
+require_relative './number'
+
 module ChurchNumerals
   class Zero
     def call(value, &action)
@@ -6,6 +8,10 @@ module ChurchNumerals
 
     def to_i
       0
+    end
+
+    def inc
+      Number.new
     end
   end
 end
