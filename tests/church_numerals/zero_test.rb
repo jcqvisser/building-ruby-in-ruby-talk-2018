@@ -40,5 +40,13 @@ module ChurchNumerals
       another_two = zero + two
       assert_equal two.to_i, another_two.to_i
     end
+
+    def test_minus_returns_zero
+      zero = Zero.new
+      two = Number.new(Number.new)
+
+      another_zero = zero - two
+      assert_equal 0, another_zero.to_i
+    end
   end
 end

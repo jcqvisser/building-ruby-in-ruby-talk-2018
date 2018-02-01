@@ -104,5 +104,25 @@ module ChurchNumerals
       another_two = two + zero
       assert_equal two.to_i, another_two.to_i
     end
+
+    def test_minus_with_a_smaller_number_returns_the_difference
+      two = Number.new(Number.new)
+      three = Number.new(Number.new(Number.new()))
+
+      assert three.to_i > two.to_i
+
+      one = three - two
+      assert_equal 1, one.to_i
+    end
+
+    def test_minus_with_a_larger_number_returns_zero
+      two = Number.new(Number.new)
+      three = Number.new(Number.new(Number.new))
+
+      assert three.to_i > two.to_i
+
+      zero = two - three
+      assert_equal 0, zero.to_i
+    end
   end
 end
