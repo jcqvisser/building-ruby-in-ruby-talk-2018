@@ -20,6 +20,13 @@ module Booleans
 
       refute executed
     end
+
+    def test_not_returns_a_false
+      t = True.new
+      f = t.not
+
+      assert f.is_a?(False)
+    end
   end
 end
 
