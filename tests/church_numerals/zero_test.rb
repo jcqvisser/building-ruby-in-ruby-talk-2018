@@ -15,5 +15,10 @@ module ChurchNumerals
 
       assert_equal expected_new_value, actual_new_value
     end
+
+    def test_to_i_returns_0
+      zero = Zero.new
+      assert_equal 0, zero.to_i
+    end
   end
 end
