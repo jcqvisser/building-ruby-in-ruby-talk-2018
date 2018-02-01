@@ -13,5 +13,9 @@ module ChurchNumerals
     def inc
       Number.new
     end
+
+    def dec
+      self
+    end
   end
 end

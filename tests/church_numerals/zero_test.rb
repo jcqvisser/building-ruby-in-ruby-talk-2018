@@ -26,5 +26,11 @@ module ChurchNumerals
       one = zero.inc
       assert_equal 1, one.to_i
     end
+
+    def test_dec_returns_a_Zero
+      zero = Zero.new
+      another_zero = zero.dec
+      assert_equal 0, zero.to_i
+    end
   end
 end
