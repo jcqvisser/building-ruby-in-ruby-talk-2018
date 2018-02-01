@@ -11,6 +11,10 @@ module ChurchNumerals
       previous_number.call(next_value, &action)
     end
 
+    def to_i
+      call(0) { |value| value + 1 }
+    end
+
     private
     attr_reader :previous_number
   end

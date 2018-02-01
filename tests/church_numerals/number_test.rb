@@ -47,5 +47,21 @@ module ChurchNumerals
 
       assert_equal n, number.call(value, &action).times_processed
     end
+
+    def test_to_i_on_a_non_nested_number_returns_1
+      number = Number.new
+      assert_equal 1, number.to_i
+    end
+
+    def test_to_i_on_a_n_times_nested_number_returns_n
+      n = 30
+
+      number = Zero.new
+      n.times do
+        number = Number.new(number)
+      end
+
+      assert_equal n, number.to_i
+    end
   end
 end
