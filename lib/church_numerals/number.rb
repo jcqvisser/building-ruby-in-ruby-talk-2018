@@ -19,6 +19,10 @@ module ChurchNumerals
       Number.new(self)
     end
 
+    def dec
+      previous_number
+    end
+
     private
     attr_reader :previous_number
   end

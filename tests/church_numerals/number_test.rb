@@ -75,5 +75,18 @@ module ChurchNumerals
 
       assert_equal expected_value, incremented_number.to_i
     end
+
+    def test_dec_returns_one_number_lower
+      number = Number.new(Number.new)
+      expected_value = 2
+
+      assert_equal expected_value, number.to_i
+
+      expected_value -= 1
+      decremented_number = number.dec
+
+      assert_equal expected_value, decremented_number.to_i
+
+    end
   end
 end
