@@ -2,6 +2,4 @@
 
 In this talk we discussed putting together a model of boolean values and natural numbers. We drew inspiration from Smalltalk and Church Numerals.
 
-Currently only the code used for the presentation is hosted here.
-Slides and more discussion to come.
-
+There is some code to play around with hosted here, as well as the slides. Writeup to come.
